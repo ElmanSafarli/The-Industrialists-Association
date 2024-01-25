@@ -1,0 +1,262 @@
+<!-- pages/home.html -->
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block body %}
+<nav>
+    <div class="navbar">
+        <div class="navbar-content">
+            <div class="nav-logo">LOGO</div>
+            <div class="nav-items">
+                <ul>
+                    <li><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
+                    <li><a href="{% url 'all_categories' %}">{% trans "Categories" %}</a></li>
+                    <li><a href="#contact-us">{% trans "Contact Us" %}</a></li>
+                    <li><a href="{% url 'all_companies' %}">{% trans "All companies" %}</a></li>
+                </ul>
+            </div>
+
+
+            <div class="nav-search">
+                <div class="switcher-language">
+                   <form action="{% url 'set_language' %}" method="post">
+                        {% csrf_token %}
+                        <input name="next" type="hidden" value="{{ request.path }}">
+                        <select name="language" id="language" onchange="this.form.submit()">
+                            {% get_current_language as current_language %}
+                            {% get_available_languages as available_languages %}
+                            {% get_language_info_list for available_languages as languages %}
+                            {% for language in languages %}
+                                <option value="{{ language.code }}" {% if language.code == current_language %}selected{% endif %}>
+                                    {{ language.name_local }} ({{ language.code }})
+                                </option>
+                            {% endfor %}
+                        </select>
+                    </form>
+                </div>
+                <form action="{% url 'all_companies' %}" method="get">
+                    <div class="nav-search-box">
+                        <input type="text" name="q" placeholder="{% trans 'Search for company' %}" value="{{ search_query }}">
+                        <button type="submit"><img src="{% static 'assets/search.png' %}" alt="{% trans 'search' %}"></button>
+                    </div>
+                </form>
+            </div>
+            <div class="sidebar">
+                <input type="checkbox" id="toggleSidebar">
+                <label class="hamburger" for="toggleSidebar">
+                    <svg viewBox="0 0 32 32">
+                        <path class="line line-top-bottom"
+                            d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
+                        </path>
+                        <path class="line" d="M7 16 27 16"></path>
+                    </svg>
+                </label>
+                <div class="sidebar-content">
+                    <div class="sidebar-logo">
+                        <img src="" alt="">
+                        <p></p>
+                    </div>
+                    <div class="sidebar-items">
+                        <ul>
+                            <li><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
+                            <li><a href="{% url 'all_categories' %}">{% trans "Categories" %}</a></li>
+                            <li><a href="">{% trans "Contact Us" %}</a></li>
+                            <li><a href="{% url 'all_companies' %}">{% trans "All companies" %}</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<header>
+    <div class="header">
+        <div class="header-content">
+            <div class="header-left">
+                <div class="header-title">{% trans "The Industrialists Association" %}</div>
+                <div class="header-subtitle">
+                    {% trans "A platform uniting diverse companies across industries, fostering collaboration for mutual growth." %}
+                </div>
+                <div class="header-btn">
+                    <a href="{% url 'all_companies' %}">{% trans "All industry" %}</a>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="header-img-group">
+                    <div class="header-img-1"></div>
+                    <div class="header-img-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+   <section>
+    <div class="about">
+        <div class="about-content">
+            <div class="about-left">
+                <div class="about-img-group top-img-about">
+                    <div class="about-img-1"></div>
+                    <div class="about-img-2"></div>
+                </div>
+            </div>
+            <div class="about-right">
+                <div class="about-section">{% trans "About Us" %}</div>
+                <div class="about-title">{% trans "Harmony of Innovation: Unveiling Our Collective Tapestry" %}</div>
+                <div class="about-subtitle">
+                    {% trans "Embark on a Journey Through a Diverse Nexus of Industries, Where Collaboration Ignites Innovation, and Every Thread Weaves a Story of Collective Success. Welcome to the Uncharted Realm of Possibilities!" %}
+                </div>
+            </div>
+            <div class="about-img-group bottom-img-about">
+                <div class="about-img-1"></div>
+                <div class="about-img-2"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section>
+        <div class="categories">
+            <div class="categories-content">
+                <div class="categories-title">{% trans "Categories" %}</div>
+                <div class="categories-box-group">
+
+                      <div class="categories-box">
+                    <div class="categories-top">
+                        <div class="categories-icon"><i class="fa-solid fa-notes-medical"></i></div>
+                        <div class="categories-box-title">{% trans "Health" %}</div>
+                    </div>
+                    <div class="categories-box-description">{% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." %}</div>
+                    <div class="categories-link">
+                        <a href="{% url 'category_companies' category_name='Medicine' %}">{% trans "View all companies" %}</a>
+                    </div>
+                </div>
+
+                <div class="categories-box">
+                    <div class="categories-top">
+                        <div class="categories-icon"><i class="fa-solid fa-soap"></i></div>
+                        <div class="categories-box-title">{% trans "Cleaning" %}</div>
+                    </div>
+                    <div class="categories-box-description">{% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." %}</div>
+                    <div class="categories-link">
+                        <a href="{% url 'category_companies' category_name='Cleaning' %}">{% trans "View all companies" %}</a>
+                    </div>
+                </div>
+
+                    <div class="categories-box">
+                        <div class="categories-top">
+                            <div class="categories-icon"><i class="fa-solid fa-wheat-awn"></i></div>
+                            <div class="categories-box-title">{% trans "Food" %}</div>
+                        </div>
+                        <div class="categories-box-description">{% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." %}</div>
+                        <div class="categories-link">
+                            <a href="{% url 'category_companies' category_name='Food' %}">{% trans "View all companies" %}</a>
+                        </div>
+                    </div>
+
+                    <div class="categories-box">
+                        <div class="categories-top">
+                            <div class="categories-icon"><i class="fa-solid fa-flask-vial"></i></div>
+                            <div class="categories-box-title">{% trans "Chemical" %}</div>
+                        </div>
+                        <div class="categories-box-description">{% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." %}</div>
+                        <div class="categories-link">
+                            <a href="{% url 'category_companies' category_name='Chemical' %}">{% trans "View all companies" %}</a>
+                        </div>
+                    </div>
+
+                    <div class="categories-box">
+                        <div class="categories-top">
+                            <div class="categories-icon"><i class="fa-solid fa-couch"></i></div>
+                            <div class="categories-box-title">{% trans "İnterior" %}</div>
+                        </div>
+                        <div class="categories-box-description">{% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." %}</div>
+                        <div class="categories-link">
+                            <a href="{% url 'category_companies' category_name='İnterior' %}">{% trans "View all companies" %}</a>
+                        </div>
+                    </div>
+
+                    <div class="categories-box">
+                        <div class="categories-top">
+                            <div class="categories-icon"><i class="fa-solid fa-hat-cowboy-side"></i></div>
+                            <div class="categories-box-title">{% trans "Fashion" %}</div>
+                        </div>
+                        <div class="categories-box-description">{% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." %}</div>
+                        <div class="categories-link">
+                            <a href="{% url 'category_companies' category_name='Fashion' %}">{% trans "View all companies" %}</a>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="category-btn-all">
+                    <a href="{% url 'all_companies' %}">{% trans "View all industries and companies" %}</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-us">
+        <div class="contact">
+            <div class="contact-content">
+                <div class="contact-title">{% trans "Contact us" %}</div>
+                <div class="contact-info">
+                    <div class="contact-items">
+                        <div class="contact-item-group">
+                            <div class="contact-item">
+                                <div class="contact-item-title">{% trans "Location" %}</div>
+                                <div class="contact-item-bottom">
+                                    <div class="contact-item-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                    <div class="contact-item-info">{% trans "Fountain Square, Baku, Azerbaijan" %}</div>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-item-title">{% trans "Phone" %}</div>
+                                <div class="contact-item-bottom">
+                                    <div class="contact-item-icon"><i class="fa-solid fa-phone"></i></div>
+                                    <div class="contact-item-info">+000 00 0000 00 00</div>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-item-title">{% trans "Email" %}</div>
+                                <div class="contact-item-bottom">
+                                    <div class="contact-item-icon"><i class="fa-solid fa-envelope"></i></div>
+                                    <div class="contact-item-info"><a href="">example@mail.com</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-item-group">
+                            <div class="contact-item">
+                                <div class="contact-item-title">{% trans "Instagram" %}</div>
+                                <div class="contact-item-bottom">
+                                    <div class="contact-item-icon"><i class="fa-brands fa-instagram"></i></div>
+                                    <div class="contact-item-info"><a href="">@example</a></div>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-item-title">{% trans "Telegram" %}</div>
+                                <div class="contact-item-bottom">
+                                    <div class="contact-item-icon"><i class="fa-brands fa-telegram"></i></div>
+                                    <div class="contact-item-info">@example</div>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-item-title">{% trans "Viber" %}</div>
+                                <div class="contact-item-bottom">
+                                    <div class="contact-item-icon"><i class="fa-brands fa-viber"></i></div>
+                                    <div class="contact-item-info">@example</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-info-map">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

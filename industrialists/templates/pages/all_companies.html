@@ -1,0 +1,132 @@
+<!-- pages/all_companies.html -->
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block body %}
+ <nav>
+        <div class="navbar">
+            <div class="navbar-content">
+                <div class="nav-logo">LOGO</div>
+                <div class="nav-items">
+                    <ul>
+                        <li><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
+                        <li><a href="{% url 'all_categories' %}">{% trans "Categories" %}</a></li>
+                        <li><a href="#contact-us">{% trans "Contact Us" %}</a></li>
+                        <li><a href="{% url 'all_companies' %}">{% trans "All companies" %}</a></li>
+                    </ul>
+                </div>
+                <div class="nav-search">
+                    <div class="switcher-language">
+                       <form action="{% url 'set_language' %}" method="post">
+                            {% csrf_token %}
+                            <input name="next" type="hidden" value="{{ request.path }}">
+                            <select name="language" id="language" onchange="this.form.submit()">
+                                {% get_current_language as current_language %}
+                                {% get_available_languages as available_languages %}
+                                {% get_language_info_list for available_languages as languages %}
+                                {% for language in languages %}
+                                    <option value="{{ language.code }}" {% if language.code == current_language %}selected{% endif %}>
+                                        {{ language.name_local }} ({{ language.code }})
+                                    </option>
+                                {% endfor %}
+                            </select>
+                        </form>
+                    </div>
+                    <form action="{% url 'all_companies' %}" method="get">
+                        <div class="nav-search-box">
+                            <input type="text" name="q" placeholder="Search for company" value="{{ search_query }}">
+                            <button type="submit"><img src="{% static 'assets/search.png' %}" alt="search"></button>
+                        </div>
+                    </form>
+                </div>
+                <div class="sidebar">
+                    <input type="checkbox" id="toggleSidebar">
+                    <label class="hamburger" for="toggleSidebar">
+                        <svg viewBox="0 0 32 32">
+                            <path class="line line-top-bottom"
+                                d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
+                            </path>
+                            <path class="line" d="M7 16 27 16"></path>
+                        </svg>
+                    </label>
+                    <div class="sidebar-content">
+                        <div class="sidebar-logo">
+                            <img src="" alt="">
+                            <p></p>
+                        </div>
+                        <div class="sidebar-items">
+                            <ul>
+                                <li><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
+                                <li><a href="{% url 'all_categories' %}">{% trans "Categories" %}</a></li>
+                                <li><a href="">{% trans "Contact Us" %}</a></li>
+                                <li><a href="{% url 'all_companies' %}">{% trans "All companies" %}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="all">
+            <div class="all-content">
+                <div class="all-bottom">
+                   <div class="all-filter">
+                    <div class="all-filter-title">{% trans "Filter" %}</div>
+                    <div class="all-filter-item">
+                        <div class="all-filter-item-title">{% trans "Country" %}</div>
+                        <div class="all-filter-item-hr"></div>
+                        <ul>
+                            <!-- Populate country filter links dynamically -->
+                            {% for country in unique_countries %}
+                                <li><a href="?country={{ country }}">{{ country }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="all-filter-item">
+                        <div class="all-filter-item-title">{% trans "industry" %}</div>
+                        <div class="all-filter-item-hr"></div>
+                        <ul>
+                            <!-- Populate industry filter links dynamically -->
+                            {% for industry in unique_industries %}
+                                <li><a href="?industry={{ industry }}">{{ industry }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                    <div>
+                        <h1 class="title-all-products">{% trans "All companies" %} </h1>
+                        <div class="all-products">
+                            {% for company in companies %}
+                            <div class="all-product">
+                                <div class="all-product-img"
+                                    style="background: url({{ company.image.url }});">
+                                </div>
+                                <div class="all-product-bottom">
+                                    <div class="all-product-info">
+                                        <div class="all-product-info-top">
+                                            <div class="all-product-info-time">
+                                                <img src="{% static 'assets/calendar.jpg' %}" alt="">
+                                                <p>{{ company.creation_date|date:"d/m/Y" }}</p>
+                                            </div>
+                                            <div class="all-product-info-category">
+                                                <img src="{% static 'assets/factory.jpg' %}" alt="">
+                                                <p>{{ company.industry }}</p>
+                                            </div>
+                                        </div>
+                                        <div class="all-product-btn"><a href="{% url 'company_detail' company_name=company.name %}"><i class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
+                                    </div>
+                                    <div class="all-product-title">{{ company.name }}</div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

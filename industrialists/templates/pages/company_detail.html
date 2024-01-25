@@ -1,0 +1,137 @@
+<!-- pages/all_companies.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+<nav>
+        <div class="navbar">
+            <div class="navbar-content">
+                <div class="nav-logo">LOGO</div>
+                <div class="nav-items">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="{% url 'all_categories' %}">Categories</a></li>
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="{% url 'all_companies' %}">All companies</a></li>
+                    </ul>
+                </div>
+                <div class="nav-search">
+                    <form action="{% url 'all_companies' %}" method="get">
+                        <div class="nav-search-box">
+                            <input type="text" name="q" placeholder="Search for company" value="{{ search_query }}">
+                            <button type="submit"><img src="{% static 'assets/search.png' %}" alt="search"></button>
+                        </div>
+                    </form>
+                </div>
+                <div class="sidebar">
+                    <input type="checkbox" id="toggleSidebar">
+                    <label class="hamburger" for="toggleSidebar">
+                        <svg viewBox="0 0 32 32">
+                            <path class="line line-top-bottom"
+                                d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
+                            </path>
+                            <path class="line" d="M7 16 27 16"></path>
+                        </svg>
+                    </label>
+                    <div class="sidebar-content">
+                        <div class="sidebar-logo">
+                            <img src="" alt="">
+                            <p></p>
+                        </div>
+                        <div class="sidebar-items">
+                            <ul>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="{% url 'all_categories' %}">Categories</a></li>
+                                <li><a href="">Contact Us</a></li>
+                                <li><a href="{% url 'all_companies' %}">All companies</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+<section>
+        <div class="more">
+            <div class="more-content">
+                <div class="more-info">
+                    <div class="more-category">{{ company.industry }} industry</div>
+                    <div class="more-title">{{ company.name }}</div>
+                    <div class="more-img"><img src="{{ company.image.url }}" alt="{{ company.name }}"></div>
+                    <div class="more-description">{{ company.description }}</div>
+                    <div class="more-contact">
+                        <div class="more-contact-item-group">
+                            <div class="more-contact-item">
+                                <div class="more-contact-item-title">Location</div>
+                                <div class="more-contact-item-bottom">
+                                    <div class="more-contact-item-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                    <div class="more-contact-item-value">{{ company.location }}</div>
+                                </div>
+                            </div>
+                            <div class="more-contact-item">
+                                <div class="more-contact-item-title">Phone</div>
+                                <div class="more-contact-item-bottom">
+                                    <div class="more-contact-item-icon"><i class="fa-solid fa-phone"></i></div>
+                                    <div class="more-contact-item-value">{{ company.phone }}</div>
+                                </div>
+                            </div>
+                            <div class="more-contact-item">
+                                <div class="more-contact-item-title">Email</div>
+                                <div class="more-contact-item-bottom">
+                                    <div class="more-contact-item-icon"><i class="fa-regular fa-envelope"></i></div>
+                                   <div class="more-contact-item-value"><a href="mailto:{{ company.email }}">{{ company.email }}</a></div>
+                                </div>
+                            </div>
+                            <div class="more-contact-item">
+                                <div class="more-contact-item-title">Instagram</div>
+                                <div class="more-contact-item-bottom">
+                                    <div class="more-contact-item-icon"><i class="fa-brands fa-instagram"></i></div>
+                                    <div class="more-contact-item-value"><a href="{{ company.instagram_link }}">@{{ company.instagram }}</a></div>
+                                </div>
+                            </div>
+                            <div class="more-contact-item">
+                                <div class="more-contact-item-title">Viber</div>
+                                <div class="more-contact-item-bottom">
+                                    <div class="more-contact-item-icon"><i class="fa-brands fa-viber"></i></div>
+                                    <div class="more-contact-item-value">@{{ company.viber }}</div>
+                                </div>
+                            </div>
+                            <div class="more-contact-item">
+                                <div class="more-contact-item-title">Telegram</div>
+                                <div class="more-contact-item-bottom">
+                                    <div class="more-contact-item-icon"><i class="fa-brands fa-telegram"></i></div>
+                                    <div class="more-contact-item-value">@{{ company.telegram }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="more-map">{{ company.map_embed_code|safe }}</div>
+                </div>
+                <div class="more-popular">
+                    <div class="more-popular-top">
+                        <img src="{% static 'assets/factory.svg' %}" alt="factory">
+                        <p>Other factories</p>
+                    </div>
+                    <div class="more-popular-box-group">
+                          {% for recent_company in recent_companies %}
+
+                                <div class="more-popular-box">
+                                    <div class="more-popular-box-img">
+                                       <img src="{{ recent_company.image.url }}" alt="{{ recent_company.name }}">
+                                    </div>
+                                    <div class="more-popular-box-info">
+                                        <a href="{% url 'company_detail' company_name=recent_company.name %}">{{ recent_company.name }}</a>
+                                        <div class="more-popular-box-category">
+                                            <img src="" alt="">
+                                            <p>{{ recent_company.industry }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                          {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

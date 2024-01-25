@@ -1,0 +1,38 @@
+{% load static %}
+{% load i18n %}
+
+    <footer>
+        <div class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="footer-items">
+                    <div class="footer-item">
+                        <div class="footer-item-title">{% trans "Useful links" %}</div>
+                        <ul>
+                            <li><a href="/">{% trans "Home" %}</a></li>
+                            <li><a href="{% url 'all_companies' %}">{% trans "All companies" %}</a></li>
+                            <li><a href="{% url 'all_categories' %}">{% trans "Categories" %}</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-item">
+                        <div class="footer-item-title">{% trans "Industries" %}</div>
+                        <ul>
+                            <li><a href="">{% trans "Health" %}</a></li>
+                            <li><a href="">{% trans "Food" %}</a></li>
+                            <li><a href="">{% trans "Cleaning" %}</a></li>
+                            <li><a href="">{% trans "Chemical" %}</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-search">
+                    <form action="{% url 'all_companies' %}" method="get">
+                            <input type="text" name="q" placeholder="Search for company" value="{{ search_query }}">
+                            <button type="submit"><img src="{% static 'assets/search.png' %}" alt="search"></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>

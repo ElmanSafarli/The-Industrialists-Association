@@ -1,0 +1,187 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#: .\templates\pages\home.html:185
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-25 18:41+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: .\app\models.py:6 .\app\models.py:13
+msgid "Name"
+msgstr ""
+
+#: .\app\models.py:14
+msgid "Creation Date"
+msgstr ""
+
+#: .\app\models.py:15
+msgid "Image"
+msgstr ""
+
+#: .\app\models.py:16
+msgid "Description"
+msgstr ""
+
+#: .\app\models.py:17 .\templates\pages\home.html:190
+msgid "Location"
+msgstr ""
+
+#: .\app\models.py:18 .\templates\pages\home.html:197
+msgid "Phone"
+msgstr ""
+
+#: .\app\models.py:19 .\templates\pages\home.html:204
+msgid "Email"
+msgstr ""
+
+#: .\app\models.py:20
+msgid "Instagram Link"
+msgstr ""
+
+#: .\app\models.py:21
+msgid "Instagram"
+msgstr ""
+
+#: .\app\models.py:22
+msgid "Viber"
+msgstr ""
+
+#: .\app\models.py:23
+msgid "Telegram"
+msgstr ""
+
+#: .\app\models.py:24
+msgid "Map Embed Code"
+msgstr ""
+
+#: .\app\models.py:25
+msgid "Industry"
+msgstr ""
+
+#: .\app\models.py:26
+msgid "Country"
+msgstr ""
+
+#: .\app\models.py:27
+msgid "Category"
+msgstr ""
+
+#: .\industrialists\settings.py:120
+msgid "English"
+msgstr ""
+
+#: .\industrialists\settings.py:121
+msgid "Arabic"
+msgstr ""
+
+#: .\templates\pages\home.html:12 .\templates\pages\home.html:43
+msgid "Home"
+msgstr ""
+
+#: .\templates\pages\home.html:13 .\templates\pages\home.html:44
+#: .\templates\pages\home.html:103
+msgid "Categories"
+msgstr ""
+
+#: .\templates\pages\home.html:14 .\templates\pages\home.html:45
+msgid "Contact Us"
+msgstr ""
+
+#: .\templates\pages\home.html:15 .\templates\pages\home.html:46
+msgid "All companies"
+msgstr ""
+
+#: .\templates\pages\home.html:21
+msgid "Search for company"
+msgstr ""
+
+#: .\templates\pages\home.html:22
+msgid "search"
+msgstr ""
+
+#: .\templates\pages\home.html:58
+msgid "The Industrialists Association"
+msgstr ""
+
+#: .\templates\pages\home.html:60
+msgid ""
+"A platform uniting diverse companies across industries, fostering "
+"collaboration for mutual growth."
+msgstr ""
+
+#: .\templates\pages\home.html:63
+msgid "All industry"
+msgstr ""
+
+#: .\templates\pages\home.html:86
+msgid "About Us"
+msgstr ""
+
+#: .\templates\pages\home.html:87
+msgid "Harmony of Innovation: Unveiling Our Collective Tapestry"
+msgstr ""
+
+#: .\templates\pages\home.html:89
+msgid ""
+"Embark on a Journey Through a Diverse Nexus of Industries, Where "
+"Collaboration Ignites Innovation, and Every Thread Weaves a Story of "
+"Collective Success. Welcome to the Uncharted Realm of Possibilities!"
+msgstr ""
+
+#: .\templates\pages\home.html:109
+msgid "Health"
+msgstr ""
+
+#: .\templates\pages\home.html:111 .\templates\pages\home.html:122
+#: .\templates\pages\home.html:133 .\templates\pages\home.html:144
+#: .\templates\pages\home.html:155 .\templates\pages\home.html:166
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
+"tempor incididunt ut labore et dolore magna aliqua."
+msgstr ""
+
+#: .\templates\pages\home.html:113 .\templates\pages\home.html:124
+#: .\templates\pages\home.html:135 .\templates\pages\home.html:146
+#: .\templates\pages\home.html:157 .\templates\pages\home.html:168
+msgid "View all companies"
+msgstr ""
+
+#: .\templates\pages\home.html:120
+msgid "Cleaning"
+msgstr ""
+
+#: .\templates\pages\home.html:131
+msgid "Food"
+msgstr ""
+
+#: .\templates\pages\home.html:142
+msgid "Chemical"
+msgstr ""
+
+#: .\templates\pages\home.html:153
+msgid "İnterior"
+msgstr ""
+
+#: .\templates\pages\home.html:164
+msgid "Fashion"
+msgstr ""
+
+#: .\templates\pages\home.html:176
+msgid "View all industries and companies"
+msgstr ""
+
+#: .\templates\pages\home.html:193
+msgid "Fountain Square, Baku, Azerbaijan"
+msgstr ""

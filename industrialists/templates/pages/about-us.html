@@ -1,4 +1,4 @@
-<!-- category_companies.html -->
+<!-- pages/home.html -->
 {% extends 'base.html' %}
 {% load static %}
 {% load i18n %}
@@ -33,10 +33,10 @@
                         </select>
                     </form>
                 </div>
-                <form action="{% url 'category_companies' category_name=category.name %}" method="get">
+                <form action="{% url 'all_companies' %}" method="get">
                     <div class="nav-search-box">
-                       <input type="text" name="q" placeholder="Search for company" value="{{ search_query }}">
-                       <button type="submit"><img src="{% static 'assets/search.png' %}" alt="search"></button>
+                        <input type="text" name="q" placeholder="{% trans 'Search for company' %}" value="{{ search_query }}">
+                        <button type="submit"><img src="{% static 'assets/search.png' %}" alt="{% trans 'search' %}"></button>
                     </div>
                 </form>
             </div>
@@ -84,68 +84,55 @@
         </div>
     </div>
 </nav>
-
-
-    <section>
-        <div class="all">
-            <div class="all-content">
-                <div class="all-top"
-                    style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url({{ category.background_image.url }}) ;">
-                    <h1>{{ category.name }} industry</h1>
-                </div>
-                <div class="all-bottom">
-                    <div class="all-filter">
-                        <div class="all-filter-title">Filter</div>
-                        <div class="all-filter-item">
-                            <div class="all-filter-item-title">Industry</div>
-                            <div class="all-filter-item-hr"></div>
-                            <ul class="desktop-filter">
-                                {% for category_item in all_categories %}
-                                    <li><a href="{% url 'category_companies' category_name=category_item.name %}">{{ category_item.name }}</a></li>
-                                {% endfor %}
-                            </ul>
-                            <ul class="swiper-container scrolling-container mobile-filter">
-                                <div class="swiper-wrapper">
-                                    {% for category_item in all_categories %}
-                                        <div class="swiper-slide element"><a href="{% url 'category_companies' category_name=category_item.name %}">{{ category_item.name }}</a></div>
-                                    {% endfor %}
+<section>
+        <div class="team-top">
+            <div class="team-title">Meet Our Team</div>
+            <div class="team-slogan">Unity in Diversity, Excellence in Every Endeavor</div>
+        </div>
+        <div class="">
+            <div class="main-wrapper">
+                <div class="section slideStyle is--black">
+                    <div class="swiper swiperParallax is-gallery">
+                        <div role="list" class="swiper-wrapper is-gallery">
+                            <div role="listitem" class="swiper-slide is-gallery">
+                                <div class="gallery-img__wrapper"><img data-swiper-parallax-x="25%" loading="lazy"
+                                        alt="Caption goes here"
+                                        src="https://cdn.corporatefinanceinstitute.com/assets/ceo-vs-cfo.jpeg"
+                                        class="gallery-img" /></div>
+                                <div class="gallery-info__wrapper">
+                                    <div class="heading-medium">Name Surname</div>
+                                    <div class="position-heading">Direktor</div>
                                 </div>
-                            </ul>
-                        </div>
-                    </div>
-                    <div>
-                        <h1 class="title-all-products">{{ category.name }} companies </h1>
-                        <div class="all-products">
-                            {% for company in companies %}
-                                <div class="all-product">
-                                    <div class="all-product-img" style="background: url({{ company.image.url }});">
-                                    </div>
-                                    <div class="all-product-bottom">
-                                        <div class="all-product-info">
-                                            <div class="all-product-info-top">
-                                                <div class="all-product-info-time">
-                                                    <img src="{% static 'assets/calendar.jpg' %}" alt="">
-                                                    <p>{{ company.creation_date|date:"d/m/Y" }}</p>
-                                                </div>
-                                                <div class="all-product-info-category">
-                                                    <img src="{% static 'assets/factory.jpg' %}" alt="">
-                                                    <p>{{ company.industry }}</p>
-                                                </div>
-                                            </div>
-                                            <div class="all-product-btn">
-                                                <a href="{% url 'company_detail' company_name=company.name %}">
-                                                    <i class="fa-solid fa-arrow-right"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="all-product-title">{{ company.name }}</div>
-                                    </div>
+                            </div>
+                            <div role="listitem" class="swiper-slide is-gallery">
+                                <div class="gallery-img__wrapper"><img data-swiper-parallax-x="25%" loading="lazy"
+                                        alt="Another photo caption"
+                                        src="https://lighthouse.mq.edu.au/__data/assets/image/0004/917194/women-ceo-tile700x400.jpg"
+                                        class="gallery-img" />
                                 </div>
-                            {% endfor %}
+                                <div class="gallery-info__wrapper">
+                                    <div class="heading-medium">Name Surname</div>
+                                    <div class="position-heading">CTO</div>
+                                </div>
+                            </div>
+                            <div role="listitem" class="swiper-slide is-gallery">
+                                <div class="gallery-img__wrapper"><img data-swiper-parallax-x="25%" loading="lazy"
+                                        alt="Photo caption"
+                                        src="https://getweeklyupdate.com/blog/wp-content/uploads/2018/02/27.jpg"
+                                        class="gallery-img" />
+                                </div>
+                                <div class="gallery-info__wrapper">
+                                    <div class="heading-medium">Name Surname</div>
+                                    <div class="position-heading">CEO</div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
+
 {% endblock %}

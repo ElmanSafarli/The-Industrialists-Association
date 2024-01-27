@@ -16,8 +16,6 @@
                     <li><a href="{% url 'all_companies' %}">{% trans "All companies" %}</a></li>
                 </ul>
             </div>
-
-
             <div class="nav-search">
                 <div class="switcher-language">
                    <form action="{% url 'set_language' %}" method="post">
@@ -54,16 +52,32 @@
                 </label>
                 <div class="sidebar-content">
                     <div class="sidebar-logo">
-                        <img src="" alt="">
-                        <p></p>
+                        <img src="{% static 'assets/logo.png' %}" alt="logo">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                     <div class="sidebar-items">
                         <ul>
                             <li><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
                             <li><a href="{% url 'all_categories' %}">{% trans "Categories" %}</a></li>
-                            <li><a href="">{% trans "Contact Us" %}</a></li>
+                            <li><a href="#contact-us">{% trans "Contact Us" %}</a></li>
                             <li><a href="{% url 'all_companies' %}">{% trans "All companies" %}</a></li>
                         </ul>
+                    </div>
+                    <div class="switcher-language">
+                       <form action="{% url 'set_language' %}" method="post">
+                            {% csrf_token %}
+                            <input name="next" type="hidden" value="{{ request.path }}">
+                            <select name="language" id="language" onchange="this.form.submit()">
+                                {% get_current_language as current_language %}
+                                {% get_available_languages as available_languages %}
+                                {% get_language_info_list for available_languages as languages %}
+                                {% for language in languages %}
+                                    <option value="{{ language.code }}" {% if language.code == current_language %}selected{% endif %}>
+                                        {{ language.name_local }} ({{ language.code }})
+                                    </option>
+                                {% endfor %}
+                            </select>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -106,6 +120,14 @@
                 <div class="about-title">{% trans "Harmony of Innovation: Unveiling Our Collective Tapestry" %}</div>
                 <div class="about-subtitle">
                     {% trans "Embark on a Journey Through a Diverse Nexus of Industries, Where Collaboration Ignites Innovation, and Every Thread Weaves a Story of Collective Success. Welcome to the Uncharted Realm of Possibilities!" %}
+                </div>
+                <div class="about-home-btn">
+                        <a href="{% url 'team' %}" class="learn-more">
+                            <span class="circle" aria-hidden="true">
+                                <span class="icon arrow"></span>
+                            </span>
+                            <span class="button-text">Learn More</span>
+                        </a>
                 </div>
             </div>
             <div class="about-img-group bottom-img-about">

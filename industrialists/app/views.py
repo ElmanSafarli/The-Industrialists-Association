@@ -7,6 +7,8 @@ from django.db.models import Q
 class HomePage(TemplateView):
     template_name = 'pages/home.html'
 
+class AboutUs(TemplateView):
+    template_name = 'pages/about-us.html'
 
 class AllCompaniesView(TemplateView):
     template_name = 'pages/all_companies.html'

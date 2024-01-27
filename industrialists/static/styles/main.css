@@ -512,6 +512,95 @@ body {
 }
 
 /* About Us page  */
+/* About Us page  */
+.about-page {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 4%;
+}
+
+.about-page-l h1 {
+    font-weight: 700;
+    font-size: 38px;
+    color: #612421;
+    margin: 12px 0;
+}
+
+.about-page-l p {
+    font-weight: 400;
+    font-size: 18px;
+    color: #0A131F;
+    margin: 10px 0;
+    width: 80%;
+}
+
+.about-goal {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #612421;
+    padding: 20px 18px;
+    border-radius: 16px;
+    width: 60%;
+    margin: 10px 0;
+}
+
+.about-goal-box-value {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.about-goal-box-value span {
+    font-weight: 700;
+    font-size: 28px;
+    color: #fff;
+}
+
+.about-goal-box-value p {
+    font-weight: 400;
+    font-size: 18px;
+    color: #fff;
+    margin-left: 6px;
+}
+
+.about-goal-box-name {
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+}
+
+.about-page-r {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+.about-page-r-img1 {
+    background-color: #333;
+    border-radius: 40%;
+    height: 450px;
+    width: 270px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    background: url('../assets/aboutp1.jpg');
+}
+
+.about-page-r-img2 {
+    background-color: #333;
+    border-radius: 40%;
+    height: 450px;
+    width: 270px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    background: url('../assets/aboutp2.jpg');
+    margin-top: 80px;
+    margin-left: 10px;
+}
+
 /* Slide Gallery */
 .slideStyle {
     position: relative;
@@ -542,14 +631,14 @@ body {
     justify-content: flex-start;
     align-items: center;
     grid-column-gap: 1.5rem;
-    grid-row-gap: 1.5rem;
+    grid-row-gap: 0;
     flex-direction: column;
     flex: none;
 }
 
 .swiperParallax .swiper-slide.swiper-slide-active .gallery-img__wrapper {
     opacity: 1;
-    transform: scale(1);
+    transform: scale(0.7);
 }
 
 .swiperParallax .swiper-slide.swiper-slide-active .gallery-info__wrapper {
@@ -560,7 +649,7 @@ body {
 .swiperParallax .gallery-img__wrapper {
     position: relative;
     overflow: hidden;
-    width: 100%;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1651,6 +1740,16 @@ body {
         margin-left: 0;
         margin-top: 12px;
     }
+
+    /* About Page + team */
+    .about-page {
+        display: block;
+    }
+
+    .about-page-l p {
+        width: 100%;
+        margin: 14px 0;
+    }
 }
 
 @media (max-width: 900px) {
@@ -2016,6 +2115,75 @@ body {
         font-size: 12px;
         width: 100%;
         margin-top: 10px;
+    }
+
+    /* About + team */
+    .about-goal {
+        width: 80%;
+    }
+
+    .about-page-l p {
+        font-size: 16px;
+    }
+
+    .about-page-l h1 {
+        font-size: 26px;
+    }
+
+    .about-goal-box-value span {
+        font-size: 28px;
+    }
+
+    .about-goal-box-value p {
+        font-size: 18px;
+        margin-left: 4px;
+    }
+
+    .about-goal-box-name {
+        font-size: 14px;
+    }
+
+    .about-page-r {
+        display: block;
+    }
+
+    .about-page-r {
+        margin-top: 20px;
+    }
+
+    .about-page-r-img1, .about-page-r-img2 {
+        width: 100%;
+        border-radius: 4%;
+        height: 260px;
+    }
+
+    .about-page-r-img2 {
+        margin-top: 8px;
+        margin-left: 0;
+    }
+
+    .team-title {
+        font-size: 2rem;
+    }
+
+    .team-slogan {
+        font-size: 0.8rem;
+    }
+
+    .swiperParallax .swiper-slide.swiper-slide-active .gallery-img__wrapper {
+        transform: scale(1.4);
+    }
+
+    .swiperParallax .gallery-img__wrapper {
+        width: 60%;
+    }
+
+    .swiperParallax .swiper-slide {
+        margin-top: 50px;
+    }
+
+    .swiperParallax .swiper-slide {
+        grid-row-gap: 3.5rem;
     }
 
     /* Footer */

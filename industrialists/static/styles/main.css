@@ -258,17 +258,17 @@ body {
 .header-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 70px 4%;
 }
 
 .header-left {
-    width: 454px;
+    width: 510px;
 }
 
 .header-title {
     color: #0A131F;
-    font-size: 34px;
+    font-size: 38px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -277,7 +277,7 @@ body {
 
 .header-subtitle {
     color: #3B424C;
-    font-size: 18px;
+    font-size: 19px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -298,7 +298,7 @@ body {
     border: 2px solid #612421;
     color: #FFF;
     padding: 14px 60px;
-    font-size: 18px;
+    font-size: 19px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -321,8 +321,8 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 356px;
-    height: 398px;
+    width: 400px;
+    height: 433px;
     border-radius: 32px;
     position: absolute;
     bottom: 0;
@@ -335,8 +335,8 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 305px;
-    height: 341px;
+    width: 326px;
+    height: 418px;
     border-radius: 32px;
     position: absolute;
     right: 0;

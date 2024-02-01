@@ -18,7 +18,7 @@
             </div>
             <div class="nav-search">
                 <div class="switcher-language">
-                   <form action="{% url 'set_language' %}" method="post">
+                     <form action="{% url 'set_language' %}" method="post">
                         {% csrf_token %}
                         <input name="next" type="hidden" value="{{ request.path }}">
                         <select name="language" id="language" onchange="this.form.submit()">
@@ -31,6 +31,7 @@
                                 </option>
                             {% endfor %}
                         </select>
+                    </form>
                     </form>
                 </div>
                 <form action="{% url 'all_companies' %}" method="get">

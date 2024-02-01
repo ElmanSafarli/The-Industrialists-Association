@@ -17,22 +17,7 @@
                 </ul>
             </div>
             <div class="nav-search">
-                <div class="switcher-language">
-                   <form action="{% url 'set_language' %}" method="post">
-                        {% csrf_token %}
-                        <input name="next" type="hidden" value="{{ request.path }}">
-                        <select name="language" id="language" onchange="this.form.submit()">
-                            {% get_current_language as current_language %}
-                            {% get_available_languages as available_languages %}
-                            {% get_language_info_list for available_languages as languages %}
-                            {% for language in languages %}
-                                <option value="{{ language.code }}" {% if language.code == current_language %}selected{% endif %}>
-                                    {{ language.name_local }} ({{ language.code }})
-                                </option>
-                            {% endfor %}
-                        </select>
-                    </form>
-                </div>
+
                 <form action="{% url 'all_companies' %}" method="get">
                     <div class="nav-search-box">
                         <input type="text" name="q" placeholder="{% trans 'Search for company' %}" value="{{ search_query }}">
@@ -63,22 +48,7 @@
                             <li><a href="{% url 'all_companies' %}">{% trans "All companies" %}</a></li>
                         </ul>
                     </div>
-                    <div class="switcher-language">
-                       <form action="{% url 'set_language' %}" method="post">
-                            {% csrf_token %}
-                            <input name="next" type="hidden" value="{{ request.path }}">
-                            <select name="language" id="language" onchange="this.form.submit()">
-                                {% get_current_language as current_language %}
-                                {% get_available_languages as available_languages %}
-                                {% get_language_info_list for available_languages as languages %}
-                                {% for language in languages %}
-                                    <option value="{{ language.code }}" {% if language.code == current_language %}selected{% endif %}>
-                                        {{ language.name_local }} ({{ language.code }})
-                                    </option>
-                                {% endfor %}
-                            </select>
-                        </form>
-                    </div>
+                    
                 </div>
             </div>
         </div>

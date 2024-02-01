@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Company, IndustryCategory
+from .models import Company, IndustryCategory, SubCategory
 from modeltranslation.admin import TranslationAdmin
 
 
@@ -12,4 +12,9 @@ class CompanyAdmin(TranslationAdmin):
 @admin.register(IndustryCategory)
 class IndustryCategoryAdmin(TranslationAdmin):
     list_display = ('name', 'background_image')
+    search_fields = ('name',)
+
+@admin.register(SubCategory)
+class IndustrySubCategoryAdmin(TranslationAdmin):
+    list_display = ('name',)
     search_fields = ('name',)

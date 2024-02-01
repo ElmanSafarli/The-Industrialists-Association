@@ -12,7 +12,7 @@
                 <ul>
                     <li><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
                     <li><a href="{% url 'all_categories' %}">{% trans "Categories" %}</a></li>
-                    <li><a href="#contact-us">{% trans "Contact Us" %}</a></li>
+                    <li><a href="/#contact-us">{% trans "Contact Us" %}</a></li>
                     <li><a href="{% url 'all_companies' %}">{% trans "All companies" %}</a></li>
                 </ul>
             </div>
@@ -59,7 +59,7 @@
                         <ul>
                             <li><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
                             <li><a href="{% url 'all_categories' %}">{% trans "Categories" %}</a></li>
-                            <li><a href="#contact-us">{% trans "Contact Us" %}</a></li>
+                            <li><a href="/#contact-us">{% trans "Contact Us" %}</a></li>
                             <li><a href="{% url 'all_companies' %}">{% trans "All companies" %}</a></li>
                         </ul>
                     </div>
@@ -108,6 +108,22 @@
                                 <div class="swiper-wrapper">
                                     {% for category_item in all_categories %}
                                         <div class="swiper-slide element"><a href="{% url 'category_companies' category_name=category_item.name %}">{{ category_item.name }}</a></div>
+                                    {% endfor %}
+                                </div>
+                            </ul>
+                        </div>
+                        <div class="all-filter-item">
+                            <div class="all-filter-item-title">Subcategory</div>
+                            <div class="all-filter-item-hr"></div>
+                            <ul class="desktop-filter">
+                                {% for subcategory_item in subcategories %}
+                                    <li><a href="?subcategory={{ subcategory_item.name }}">{{ subcategory_item.name }}</a></li>
+                                {% endfor %}
+                            </ul>
+                            <ul class="swiper-container scrolling-container mobile-filter">
+                                <div class="swiper-wrapper">
+                                    {% for subcategory_item in subcategories %}
+                                        <div class="swiper-slide element"><a href="?subcategory={{ subcategory_item.name }}">{{ subcategory_item.name }}</a></div>
                                     {% endfor %}
                                 </div>
                             </ul>

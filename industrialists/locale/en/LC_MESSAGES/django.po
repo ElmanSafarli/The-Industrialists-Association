@@ -3,13 +3,12 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#: .\templates\pages\home.html:185
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-25 18:41+0400\n"
+"POT-Creation-Date: 2024-02-01 16:00+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,170 +17,253 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-#: .\app\models.py:6 .\app\models.py:13
+
+#: .\app\models.py:6 .\app\models.py:14 .\app\models.py:22
 msgid "Name"
-msgstr ""
+msgstr "Name"
 
-#: .\app\models.py:14
-msgid "Creation Date"
-msgstr ""
-
-#: .\app\models.py:15
+#: .\app\models.py:7 .\app\models.py:24
 msgid "Image"
-msgstr ""
+msgstr "Image"
 
-#: .\app\models.py:16
-msgid "Description"
-msgstr ""
-
-#: .\app\models.py:17 .\templates\pages\home.html:190
-msgid "Location"
-msgstr ""
-
-#: .\app\models.py:18 .\templates\pages\home.html:197
-msgid "Phone"
-msgstr ""
-
-#: .\app\models.py:19 .\templates\pages\home.html:204
-msgid "Email"
-msgstr ""
-
-#: .\app\models.py:20
-msgid "Instagram Link"
-msgstr ""
+#: .\app\models.py:15 .\app\models.py:36
+msgid "Category"
+msgstr "Category"
 
 #: .\app\models.py:21
-msgid "Instagram"
-msgstr ""
-
-#: .\app\models.py:22
-msgid "Viber"
-msgstr ""
+#, fuzzy
+#| msgid "Category"
+msgid "Subcategory"
+msgstr "Category"
 
 #: .\app\models.py:23
-msgid "Telegram"
-msgstr ""
-
-#: .\app\models.py:24
-msgid "Map Embed Code"
-msgstr ""
+msgid "Creation Date"
+msgstr "Creation Date"
 
 #: .\app\models.py:25
+msgid "Description"
+msgstr "Description"
+
+#: .\app\models.py:26 .\templates\pages\home.html:231
+msgid "Location"
+msgstr "Location"
+
+#: .\app\models.py:27 .\templates\pages\home.html:238
+msgid "Phone"
+msgstr "Phone"
+
+#: .\app\models.py:28 .\templates\pages\home.html:245
+msgid "Email"
+msgstr "Email"
+
+#: .\app\models.py:29
+msgid "Instagram Link"
+msgstr "Instagram Link"
+
+#: .\app\models.py:30 .\templates\pages\home.html:254
+msgid "Instagram"
+msgstr "Instagram"
+
+#: .\app\models.py:31 .\templates\pages\home.html:268
+msgid "Viber"
+msgstr "Viber"
+
+#: .\app\models.py:32 .\templates\pages\home.html:261
+msgid "Telegram"
+msgstr "Telegram"
+
+#: .\app\models.py:33
+msgid "Map Embed Code"
+msgstr "Map Embed Code"
+
+#: .\app\models.py:34 .\templates\include\footer.html:21
+#: .\templates\pages\all_categories.html:93
+#: .\templates\pages\all_companies.html:110
 msgid "Industry"
-msgstr ""
+msgstr "Industry"
 
-#: .\app\models.py:26
+#: .\app\models.py:35 .\templates\pages\all_companies.html:94
 msgid "Country"
-msgstr ""
+msgstr "Country"
 
-#: .\app\models.py:27
-msgid "Category"
-msgstr ""
-
-#: .\industrialists\settings.py:120
+#: .\industrialists\settings.py:122
 msgid "English"
-msgstr ""
+msgstr "English"
 
-#: .\industrialists\settings.py:121
+#: .\industrialists\settings.py:123
 msgid "Arabic"
-msgstr ""
+msgstr "Arabic"
 
-#: .\templates\pages\home.html:12 .\templates\pages\home.html:43
-msgid "Home"
-msgstr ""
+#: .\templates\include\footer.html:13
+msgid "Useful links"
+msgstr "Useful links"
 
-#: .\templates\pages\home.html:13 .\templates\pages\home.html:44
-#: .\templates\pages\home.html:103
-msgid "Categories"
-msgstr ""
-
-#: .\templates\pages\home.html:14 .\templates\pages\home.html:45
-msgid "Contact Us"
-msgstr ""
-
-#: .\templates\pages\home.html:15 .\templates\pages\home.html:46
-msgid "All companies"
-msgstr ""
-
-#: .\templates\pages\home.html:21
-msgid "Search for company"
-msgstr ""
-
-#: .\templates\pages\home.html:22
-msgid "search"
-msgstr ""
-
-#: .\templates\pages\home.html:58
-msgid "The Industrialists Association"
-msgstr ""
-
+#: .\templates\include\footer.html:15 .\templates\pages\about-us.html:13
+#: .\templates\pages\about-us.html:60 .\templates\pages\all_categories.html:13
+#: .\templates\pages\all_categories.html:60
+#: .\templates\pages\all_companies.html:13
+#: .\templates\pages\all_companies.html:60
+#: .\templates\pages\category_companies.html:13
+#: .\templates\pages\category_companies.html:60
+#: .\templates\pages\company_detail.html:13
+#: .\templates\pages\company_detail.html:60 .\templates\pages\home.html:13
 #: .\templates\pages\home.html:60
+msgid "Home"
+msgstr "Home"
+
+#: .\templates\include\footer.html:16 .\templates\pages\about-us.html:16
+#: .\templates\pages\about-us.html:63 .\templates\pages\all_categories.html:16
+#: .\templates\pages\all_categories.html:63
+#: .\templates\pages\all_companies.html:16
+#: .\templates\pages\all_companies.html:63
+#: .\templates\pages\all_companies.html:127
+#: .\templates\pages\category_companies.html:16
+#: .\templates\pages\category_companies.html:63
+#: .\templates\pages\company_detail.html:16
+#: .\templates\pages\company_detail.html:63 .\templates\pages\home.html:16
+#: .\templates\pages\home.html:63
+msgid "All companies"
+msgstr "All companies"
+
+#: .\templates\include\footer.html:17 .\templates\pages\about-us.html:14
+#: .\templates\pages\about-us.html:61 .\templates\pages\all_categories.html:14
+#: .\templates\pages\all_categories.html:61
+#: .\templates\pages\all_companies.html:14
+#: .\templates\pages\all_companies.html:61
+#: .\templates\pages\category_companies.html:14
+#: .\templates\pages\category_companies.html:61
+#: .\templates\pages\company_detail.html:14
+#: .\templates\pages\company_detail.html:61 .\templates\pages\home.html:14
+#: .\templates\pages\home.html:61 .\templates\pages\home.html:144
+msgid "Categories"
+msgstr "Categories"
+
+#: .\templates\include\footer.html:23 .\templates\pages\home.html:161
+#, fuzzy
+#| msgid "Location"
+msgid "Construction"
+msgstr "Location"
+
+#: .\templates\include\footer.html:24 .\templates\pages\home.html:150
+msgid "Food"
+msgstr "Food"
+
+#: .\templates\include\footer.html:25 .\templates\pages\home.html:183
+msgid "Textiles"
+msgstr "Textiles"
+
+#: .\templates\include\footer.html:26 .\templates\pages\home.html:172
+msgid "Chemical"
+msgstr "Chemical"
+
+#: .\templates\include\footer.html:27 .\templates\pages\home.html:194
+msgid "Energy"
+msgstr "Energy"
+
+#: .\templates\pages\about-us.html:15 .\templates\pages\about-us.html:62
+#: .\templates\pages\all_categories.html:15
+#: .\templates\pages\all_categories.html:62
+#: .\templates\pages\all_companies.html:15
+#: .\templates\pages\all_companies.html:62
+#: .\templates\pages\category_companies.html:15
+#: .\templates\pages\category_companies.html:62
+#: .\templates\pages\company_detail.html:15
+#: .\templates\pages\company_detail.html:62 .\templates\pages\home.html:15
+#: .\templates\pages\home.html:62
+msgid "Contact Us"
+msgstr "Contact Us"
+
+#: .\templates\pages\about-us.html:38 .\templates\pages\all_categories.html:38
+#: .\templates\pages\all_companies.html:38
+#: .\templates\pages\company_detail.html:38 .\templates\pages\home.html:38
+msgid "Search for company"
+msgstr "Search for company"
+
+#: .\templates\pages\about-us.html:39 .\templates\pages\all_categories.html:39
+#: .\templates\pages\all_companies.html:39
+#: .\templates\pages\company_detail.html:39 .\templates\pages\home.html:39
+msgid "search"
+msgstr "search"
+
+#: .\templates\pages\all_companies.html:92
+msgid "Filter"
+msgstr "Filter"
+
+#: .\templates\pages\home.html:91
+#, fuzzy
+#| msgid "The Industrialists Association"
+msgid "Industrialists Association Of Chouefeit & Suburbs"
+msgstr "The Industrialists Association"
+
+#: .\templates\pages\home.html:93
 msgid ""
 "A platform uniting diverse companies across industries, fostering "
 "collaboration for mutual growth."
 msgstr ""
+"A platform uniting diverse companies across industries, fostering "
+"collaboration for mutual growth."
 
-#: .\templates\pages\home.html:63
+#: .\templates\pages\home.html:96
 msgid "All industry"
-msgstr ""
+msgstr "All industry"
 
-#: .\templates\pages\home.html:86
+#: .\templates\pages\home.html:119
 msgid "About Us"
-msgstr ""
+msgstr "About Us"
 
-#: .\templates\pages\home.html:87
+#: .\templates\pages\home.html:120
 msgid "Harmony of Innovation: Unveiling Our Collective Tapestry"
-msgstr ""
+msgstr "Harmony of Innovation: Unveiling Our Collective Tapestry"
 
-#: .\templates\pages\home.html:89
+#: .\templates\pages\home.html:122
 msgid ""
 "Embark on a Journey Through a Diverse Nexus of Industries, Where "
 "Collaboration Ignites Innovation, and Every Thread Weaves a Story of "
 "Collective Success. Welcome to the Uncharted Realm of Possibilities!"
 msgstr ""
+"Embark on a Journey Through a Diverse Nexus of Industries, Where "
+"Collaboration Ignites Innovation, and Every Thread Weaves a Story of "
+"Collective Success. Welcome to the Uncharted Realm of Possibilities!"
 
-#: .\templates\pages\home.html:109
-msgid "Health"
-msgstr ""
-
-#: .\templates\pages\home.html:111 .\templates\pages\home.html:122
-#: .\templates\pages\home.html:133 .\templates\pages\home.html:144
-#: .\templates\pages\home.html:155 .\templates\pages\home.html:166
+#: .\templates\pages\home.html:152 .\templates\pages\home.html:163
+#: .\templates\pages\home.html:174 .\templates\pages\home.html:185
+#: .\templates\pages\home.html:196 .\templates\pages\home.html:207
 msgid ""
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
 "tempor incididunt ut labore et dolore magna aliqua."
 msgstr ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
+"tempor incididunt ut labore et dolore magna aliqua."
 
-#: .\templates\pages\home.html:113 .\templates\pages\home.html:124
-#: .\templates\pages\home.html:135 .\templates\pages\home.html:146
-#: .\templates\pages\home.html:157 .\templates\pages\home.html:168
+#: .\templates\pages\home.html:154 .\templates\pages\home.html:165
+#: .\templates\pages\home.html:176 .\templates\pages\home.html:187
+#: .\templates\pages\home.html:198 .\templates\pages\home.html:209
 msgid "View all companies"
-msgstr ""
+msgstr "View all companies"
 
-#: .\templates\pages\home.html:120
-msgid "Cleaning"
-msgstr ""
+#: .\templates\pages\home.html:205
+msgid "Others"
+msgstr "Others"
 
-#: .\templates\pages\home.html:131
-msgid "Food"
-msgstr ""
-
-#: .\templates\pages\home.html:142
-msgid "Chemical"
-msgstr ""
-
-#: .\templates\pages\home.html:153
-msgid "İnterior"
-msgstr ""
-
-#: .\templates\pages\home.html:164
-msgid "Fashion"
-msgstr ""
-
-#: .\templates\pages\home.html:176
+#: .\templates\pages\home.html:217
 msgid "View all industries and companies"
-msgstr ""
+msgstr "View all industries and companies"
 
-#: .\templates\pages\home.html:193
+#: .\templates\pages\home.html:226
+#, fuzzy
+#| msgid "Contact Us"
+msgid "Contact us"
+msgstr "Contact Us"
+
+#: .\templates\pages\home.html:234
 msgid "Fountain Square, Baku, Azerbaijan"
-msgstr ""
+msgstr "Fountain Square, Baku, Azerbaijan"
+
+#~ msgid "Health"
+#~ msgstr "Health"
+
+#~ msgid "Cleaning"
+#~ msgstr "Cleaning"
+
+#~ msgid "İnterior"
+#~ msgstr "İnterior"

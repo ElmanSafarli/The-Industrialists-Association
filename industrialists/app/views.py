@@ -1,7 +1,7 @@
 from django.shortcuts import redirect
 from django.shortcuts import get_object_or_404
 from django.views.generic import TemplateView
-from .models import Company, IndustryCategory
+from .models import Company, IndustryCategory, SubCategory
 from django.db.models import Q
 
 class HomePage(TemplateView):
@@ -63,33 +63,40 @@ class CompanyDetailView(TemplateView):
 
         return context
 
+
 class CategoryCompaniesView(TemplateView):
     template_name = 'pages/category_companies.html'
 
     def get_context_data(self, category_name, **kwargs):
         context = super().get_context_data(**kwargs)
+
+        # Get the main category
         category = get_object_or_404(IndustryCategory, name=category_name)
-        companies = Company.objects.filter(category=category)
         context['category'] = category
-        context['companies'] = companies
 
-        # Get unique values for countries
-        unique_countries = companies.values_list('country', flat=True).distinct()
-        context['unique_countries'] = unique_countries
+        # Get subcategories for the main category
+        subcategories = SubCategory.objects.filter(category=category)
+        context['subcategories'] = subcategories
 
-        # Check if search is made from a category page
-        if 'q' in self.request.GET:
-            search_query = self.request.GET.get('q')
-
-            # If search is made from a category page, search only by the company name in that category
-            context['search_category'] = True
-            context['search_query'] = search_query
-            companies = companies.filter(name__icontains=search_query)
-            context['companies'] = companies
-
-        # Get all categories for displaying in the template
+        # Get all main categories
         all_categories = IndustryCategory.objects.all()
         context['all_categories'] = all_categories
+
+        # Get companies for the main category
+        companies = Company.objects.filter(category=category)
+
+        # If a subcategory is selected, filter companies based on the subcategory
+        subcategory_name = self.request.GET.get('subcategory')
+        if subcategory_name:
+            subcategory = get_object_or_404(SubCategory, name=subcategory_name, category=category)
+            companies = companies.filter(subcategory=subcategory)
+            context['selected_subcategory'] = subcategory
+
+        # Other context data you might need
+        context['companies'] = companies
+        context['unique_countries'] = companies.values_list('country', flat=True).distinct()
+        context['search_category'] = 'q' in self.request.GET
+        context['search_query'] = self.request.GET.get('q', '')
 
         return context
 

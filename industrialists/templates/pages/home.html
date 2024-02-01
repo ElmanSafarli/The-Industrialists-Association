@@ -88,7 +88,7 @@
     <div class="header">
         <div class="header-content">
             <div class="header-left">
-                <div class="header-title">{% trans "The Industrialists Association" %}</div>
+                <div class="header-title">{% trans "Industrialists Association Of Chouefeit & Suburbs" %}</div>
                 <div class="header-subtitle">
                     {% trans "A platform uniting diverse companies across industries, fostering collaboration for mutual growth." %}
                 </div>
@@ -144,36 +144,25 @@
                 <div class="categories-title">{% trans "Categories" %}</div>
                 <div class="categories-box-group">
 
-                      <div class="categories-box">
-                    <div class="categories-top">
-                        <div class="categories-icon"><i class="fa-solid fa-notes-medical"></i></div>
-                        <div class="categories-box-title">{% trans "Health" %}</div>
-                    </div>
-                    <div class="categories-box-description">{% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." %}</div>
-                    <div class="categories-link">
-                        <a href="{% url 'category_companies' category_name='Medicine' %}">{% trans "View all companies" %}</a>
-                    </div>
-                </div>
-
                 <div class="categories-box">
                     <div class="categories-top">
-                        <div class="categories-icon"><i class="fa-solid fa-soap"></i></div>
-                        <div class="categories-box-title">{% trans "Cleaning" %}</div>
+                        <div class="categories-icon"><i class="fa-solid fa-wheat-awn"></i></div>
+                        <div class="categories-box-title">{% trans "Food" %}</div>
                     </div>
                     <div class="categories-box-description">{% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." %}</div>
                     <div class="categories-link">
-                        <a href="{% url 'category_companies' category_name='Cleaning' %}">{% trans "View all companies" %}</a>
+                        <a href="{% url 'category_companies' category_name='Food' %}">{% trans "View all companies" %}</a>
                     </div>
                 </div>
 
                     <div class="categories-box">
                         <div class="categories-top">
-                            <div class="categories-icon"><i class="fa-solid fa-wheat-awn"></i></div>
-                            <div class="categories-box-title">{% trans "Food" %}</div>
+                            <div class="categories-icon"><i class="fa-solid fa-helmet-safety"></i></div>
+                            <div class="categories-box-title">{% trans "Construction" %}</div>
                         </div>
                         <div class="categories-box-description">{% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." %}</div>
                         <div class="categories-link">
-                            <a href="{% url 'category_companies' category_name='Food' %}">{% trans "View all companies" %}</a>
+                            <a href="{% url 'category_companies' category_name='Construction' %}">{% trans "View all companies" %}</a>
                         </div>
                     </div>
 
@@ -190,23 +179,34 @@
 
                     <div class="categories-box">
                         <div class="categories-top">
-                            <div class="categories-icon"><i class="fa-solid fa-couch"></i></div>
-                            <div class="categories-box-title">{% trans "İnterior" %}</div>
+                            <div class="categories-icon"><i class="fa-solid fa-rug"></i></div>
+                            <div class="categories-box-title">{% trans "Textiles" %}</div>
                         </div>
                         <div class="categories-box-description">{% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." %}</div>
                         <div class="categories-link">
-                            <a href="{% url 'category_companies' category_name='İnterior' %}">{% trans "View all companies" %}</a>
+                            <a href="{% url 'category_companies' category_name='Textiles' %}">{% trans "View all companies" %}</a>
                         </div>
                     </div>
 
                     <div class="categories-box">
                         <div class="categories-top">
-                            <div class="categories-icon"><i class="fa-solid fa-hat-cowboy-side"></i></div>
-                            <div class="categories-box-title">{% trans "Fashion" %}</div>
+                            <div class="categories-icon"><i class="fa-solid fa-solar-panel"></i></div>
+                            <div class="categories-box-title">{% trans "Energy" %}</div>
                         </div>
                         <div class="categories-box-description">{% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." %}</div>
                         <div class="categories-link">
-                            <a href="{% url 'category_companies' category_name='Fashion' %}">{% trans "View all companies" %}</a>
+                            <a href="{% url 'category_companies' category_name='Energy' %}">{% trans "View all companies" %}</a>
+                        </div>
+                    </div>
+
+                     <div class="categories-box">
+                        <div class="categories-top">
+                            <div class="categories-icon"><i class="fa-solid fa-industry"></i></div>
+                            <div class="categories-box-title">{% trans "Others" %}</div>
+                        </div>
+                        <div class="categories-box-description">{% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." %}</div>
+                        <div class="categories-link">
+                            <a href="{% url 'all_categories' %}">{% trans "View all companies" %}</a>
                         </div>
                     </div>
 

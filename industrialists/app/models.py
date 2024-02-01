@@ -9,7 +9,16 @@ class IndustryCategory(models.Model):
     def __str__(self):
         return self.name
 
+
+class SubCategory(models.Model):
+    name = models.CharField(max_length=100, verbose_name=_('Name'))
+    category = models.ForeignKey(IndustryCategory, on_delete=models.CASCADE, verbose_name=_('Category'))
+
+    def __str__(self):
+        return self.name
+
 class Company(models.Model):
+    subcategory = models.ForeignKey(SubCategory, on_delete=models.SET_NULL, null=True, blank=True, verbose_name=_('Subcategory'))
     name = models.CharField(max_length=255, verbose_name=_('Name'))
     creation_date = models.DateField(verbose_name=_('Creation Date'))
     image = models.ImageField(upload_to='company_images/', verbose_name=_('Image'))

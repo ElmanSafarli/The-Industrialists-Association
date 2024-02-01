@@ -20,10 +20,11 @@
                     <div class="footer-item">
                         <div class="footer-item-title">{% trans "Industry" %}</div>
                         <ul>
-                            <li><a href="">{% trans "Health" %}</a></li>
-                            <li><a href="">{% trans "Food" %}</a></li>
-                            <li><a href="">{% trans "Cleaning" %}</a></li>
-                            <li><a href="">{% trans "Chemical" %}</a></li>
+                            <li><a href="{% url 'category_companies' category_name='Construction' %}">{% trans "Construction" %}</a></li>
+                            <li><a href="{% url 'category_companies' category_name='Food' %}">{% trans "Food" %}</a></li>
+                            <li><a href="{% url 'category_companies' category_name='Textiles' %}">{% trans "Textiles" %}</a></li>
+                            <li><a href="{% url 'category_companies' category_name='Chemical' %}">{% trans "Chemical" %}</a></li>
+                            <li><a href="{% url 'category_companies' category_name='Energy' %}">{% trans "Energy" %}</a></li>
                         </ul>
                     </div>
                 </div>

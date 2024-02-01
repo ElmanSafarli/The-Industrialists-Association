@@ -263,7 +263,7 @@ body {
 }
 
 .header-left {
-    width: 376px;
+    width: 454px;
 }
 
 .header-title {
@@ -981,6 +981,7 @@ body {
 
 .swiper-wrapper {
     display: flex;
+    align-items: center;
 }
 
 .swiper-container {

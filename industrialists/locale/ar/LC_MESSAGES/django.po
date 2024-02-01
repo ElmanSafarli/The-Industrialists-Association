@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-26 20:57+0400\n"
+"POT-Creation-Date: 2024-02-01 14:45+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,67 +19,73 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: .\app\models.py:6 .\app\models.py:13
+#: .\app\models.py:6 .\app\models.py:14 .\app\models.py:22
 msgid "Name"
 msgstr "اسم"
 
-#: .\app\models.py:7 .\app\models.py:15
+#: .\app\models.py:7 .\app\models.py:24
 msgid "Image"
 msgstr "صورة"
 
-#: .\app\models.py:14
+#: .\app\models.py:15 .\app\models.py:36
+msgid "Category"
+msgstr "التصنيف"
+
+#: .\app\models.py:21
+#, fuzzy
+#| msgid "Category"
+msgid "Subcategory"
+msgstr "التصنيف"
+
+#: .\app\models.py:23
 msgid "Creation Date"
 msgstr "تاريخ الإنشاء"
 
-#: .\app\models.py:16
+#: .\app\models.py:25
 msgid "Description"
 msgstr "وصف"
 
-#: .\app\models.py:17 .\templates\pages\home.html:217
+#: .\app\models.py:26 .\templates\pages\home.html:231
 msgid "Location"
 msgstr "الموقع"
 
-#: .\app\models.py:18 .\templates\pages\home.html:224
+#: .\app\models.py:27 .\templates\pages\home.html:238
 msgid "Phone"
 msgstr "هاتف"
 
-#: .\app\models.py:19 .\templates\pages\home.html:231
+#: .\app\models.py:28 .\templates\pages\home.html:245
 msgid "Email"
 msgstr "البريد الإلكتروني"
 
-#: .\app\models.py:20
+#: .\app\models.py:29
 msgid "Instagram Link"
 msgstr "رابط الإنستغرام"
 
-#: .\app\models.py:21 .\templates\pages\home.html:240
+#: .\app\models.py:30 .\templates\pages\home.html:254
 msgid "Instagram"
 msgstr "إنستغرام"
 
-#: .\app\models.py:22 .\templates\pages\home.html:254
+#: .\app\models.py:31 .\templates\pages\home.html:268
 msgid "Viber"
 msgstr "فايبر"
 
-#: .\app\models.py:23 .\templates\pages\home.html:247
+#: .\app\models.py:32 .\templates\pages\home.html:261
 msgid "Telegram"
 msgstr "تليجرام"
 
-#: .\app\models.py:24
+#: .\app\models.py:33
 msgid "Map Embed Code"
 msgstr "رمز التضمين على الخريطة"
 
-#: .\app\models.py:25 .\templates\include\footer.html:21
-#: .\templates\pages\all_categories.html:79
-#: .\templates\pages\all_companies.html:88
+#: .\app\models.py:34 .\templates\include\footer.html:21
+#: .\templates\pages\all_categories.html:93
+#: .\templates\pages\all_companies.html:110
 msgid "Industry"
 msgstr "صناعة"
 
-#: .\app\models.py:26 .\templates\pages\all_companies.html:78
+#: .\app\models.py:35 .\templates\pages\all_companies.html:94
 msgid "Country"
 msgstr "البلد"
-
-#: .\app\models.py:27
-msgid "Category"
-msgstr "التصنيف"
 
 #: .\industrialists\settings.py:122
 msgid "English"
@@ -94,109 +100,119 @@ msgid "Useful links"
 msgstr "روابط مفيدة"
 
 #: .\templates\include\footer.html:15 .\templates\pages\about-us.html:13
-#: .\templates\pages\about-us.html:62 .\templates\pages\all_categories.html:13
-#: .\templates\pages\all_categories.html:62
+#: .\templates\pages\about-us.html:60 .\templates\pages\all_categories.html:13
+#: .\templates\pages\all_categories.html:60
 #: .\templates\pages\all_companies.html:13
 #: .\templates\pages\all_companies.html:60
 #: .\templates\pages\category_companies.html:13
-#: .\templates\pages\category_companies.html:59
+#: .\templates\pages\category_companies.html:60
 #: .\templates\pages\company_detail.html:13
-#: .\templates\pages\company_detail.html:62 .\templates\pages\home.html:13
-#: .\templates\pages\home.html:62
+#: .\templates\pages\company_detail.html:60 .\templates\pages\home.html:13
+#: .\templates\pages\home.html:60
 msgid "Home"
 msgstr "الرئيسية"
 
 #: .\templates\include\footer.html:16 .\templates\pages\about-us.html:16
-#: .\templates\pages\about-us.html:65 .\templates\pages\all_categories.html:16
-#: .\templates\pages\all_categories.html:65
+#: .\templates\pages\about-us.html:63 .\templates\pages\all_categories.html:16
+#: .\templates\pages\all_categories.html:63
 #: .\templates\pages\all_companies.html:16
 #: .\templates\pages\all_companies.html:63
-#: .\templates\pages\all_companies.html:99
-#: .\templates\pages\category_companies.html:15
-#: .\templates\pages\category_companies.html:61
+#: .\templates\pages\all_companies.html:127
+#: .\templates\pages\category_companies.html:16
+#: .\templates\pages\category_companies.html:63
 #: .\templates\pages\company_detail.html:16
-#: .\templates\pages\company_detail.html:65 .\templates\pages\home.html:16
-#: .\templates\pages\home.html:65
+#: .\templates\pages\company_detail.html:63 .\templates\pages\home.html:16
+#: .\templates\pages\home.html:63
 msgid "All companies"
 msgstr "كل الشركات"
 
 #: .\templates\include\footer.html:17 .\templates\pages\about-us.html:14
-#: .\templates\pages\about-us.html:63 .\templates\pages\all_categories.html:14
-#: .\templates\pages\all_categories.html:63
+#: .\templates\pages\about-us.html:61 .\templates\pages\all_categories.html:14
+#: .\templates\pages\all_categories.html:61
 #: .\templates\pages\all_companies.html:14
 #: .\templates\pages\all_companies.html:61
 #: .\templates\pages\category_companies.html:14
-#: .\templates\pages\category_companies.html:60
+#: .\templates\pages\category_companies.html:61
 #: .\templates\pages\company_detail.html:14
-#: .\templates\pages\company_detail.html:63 .\templates\pages\home.html:14
-#: .\templates\pages\home.html:63 .\templates\pages\home.html:130
+#: .\templates\pages\company_detail.html:61 .\templates\pages\home.html:14
+#: .\templates\pages\home.html:61 .\templates\pages\home.html:144
 msgid "Categories"
 msgstr "التصنيفات"
 
-#: .\templates\include\footer.html:23 .\templates\pages\home.html:136
-msgid "Health"
-msgstr "الصحة"
+#: .\templates\include\footer.html:23 .\templates\pages\home.html:161
+#, fuzzy
+#| msgid "Location"
+msgid "Construction"
+msgstr "الموقع"
 
-#: .\templates\include\footer.html:24 .\templates\pages\home.html:158
+#: .\templates\include\footer.html:24 .\templates\pages\home.html:150
 msgid "Food"
 msgstr "طعام"
 
-#: .\templates\include\footer.html:25 .\templates\pages\home.html:147
-msgid "Cleaning"
-msgstr "تنظيف"
+#: .\templates\include\footer.html:25 .\templates\pages\home.html:183
+msgid "Textiles"
+msgstr "المنسوجات"
 
-#: .\templates\include\footer.html:26 .\templates\pages\home.html:169
+#: .\templates\include\footer.html:26 .\templates\pages\home.html:172
 msgid "Chemical"
 msgstr "كيميائي"
 
-#: .\templates\pages\about-us.html:15 .\templates\pages\about-us.html:64
+#: .\templates\include\footer.html:27 .\templates\pages\home.html:194
+msgid "Energy"
+msgstr "طاقة"
+
+#: .\templates\pages\about-us.html:15 .\templates\pages\about-us.html:62
 #: .\templates\pages\all_categories.html:15
-#: .\templates\pages\all_categories.html:64
+#: .\templates\pages\all_categories.html:62
 #: .\templates\pages\all_companies.html:15
 #: .\templates\pages\all_companies.html:62
+#: .\templates\pages\category_companies.html:15
+#: .\templates\pages\category_companies.html:62
 #: .\templates\pages\company_detail.html:15
-#: .\templates\pages\company_detail.html:64 .\templates\pages\home.html:15
-#: .\templates\pages\home.html:64
+#: .\templates\pages\company_detail.html:62 .\templates\pages\home.html:15
+#: .\templates\pages\home.html:62
 msgid "Contact Us"
 msgstr "اتصل بنا"
 
-#: .\templates\pages\about-us.html:40 .\templates\pages\all_categories.html:40
-#: .\templates\pages\company_detail.html:40 .\templates\pages\home.html:40
+#: .\templates\pages\about-us.html:38 .\templates\pages\all_categories.html:38
+#: .\templates\pages\all_companies.html:38
+#: .\templates\pages\company_detail.html:38 .\templates\pages\home.html:38
 msgid "Search for company"
 msgstr "ابحث عن شركة"
 
-#: .\templates\pages\about-us.html:41 .\templates\pages\all_categories.html:41
-#: .\templates\pages\company_detail.html:41 .\templates\pages\home.html:41
+#: .\templates\pages\about-us.html:39 .\templates\pages\all_categories.html:39
+#: .\templates\pages\all_companies.html:39
+#: .\templates\pages\company_detail.html:39 .\templates\pages\home.html:39
 msgid "search"
 msgstr "بحث"
 
-#: .\templates\pages\all_companies.html:76
+#: .\templates\pages\all_companies.html:92
 msgid "Filter"
 msgstr "منقي"
 
-#: .\templates\pages\home.html:77
-msgid "The Industrialists Association"
-msgstr "جمعية الصناعيين"
+#: .\templates\pages\home.html:91
+msgid "Industrialists Association Of Chouefeit & Suburbs"
+msgstr "جمعية صناعيي الشويفيت وضواحيها"
 
-#: .\templates\pages\home.html:79
+#: .\templates\pages\home.html:93
 msgid ""
 "A platform uniting diverse companies across industries, fostering "
 "collaboration for mutual growth."
 msgstr "منصة توحد شركات متنوعة عبر الصناعات، تعزز التعاون للنمو المتبادل."
 
-#: .\templates\pages\home.html:82
+#: .\templates\pages\home.html:96
 msgid "All industry"
 msgstr "كل الصناعات"
 
-#: .\templates\pages\home.html:105
+#: .\templates\pages\home.html:119
 msgid "About Us"
 msgstr "من نحن"
 
-#: .\templates\pages\home.html:106
+#: .\templates\pages\home.html:120
 msgid "Harmony of Innovation: Unveiling Our Collective Tapestry"
 msgstr "توازن الابتكار: الكشف عن نسيجنا الجماعي"
 
-#: .\templates\pages\home.html:108
+#: .\templates\pages\home.html:122
 msgid ""
 "Embark on a Journey Through a Diverse Nexus of Industries, Where "
 "Collaboration Ignites Innovation, and Every Thread Weaves a Story of "
@@ -205,9 +221,9 @@ msgstr ""
 "ابدأ في رحلة عبر تجمع متنوع من الصناعات، حيث يشعل التعاون الابتكار، وكل خيط "
 "ينسج قصة نجاح جماعي. مرحبًا بك في عالم الإمكانيات غير المكتشف!"
 
-#: .\templates\pages\home.html:138 .\templates\pages\home.html:149
-#: .\templates\pages\home.html:160 .\templates\pages\home.html:171
-#: .\templates\pages\home.html:182 .\templates\pages\home.html:193
+#: .\templates\pages\home.html:152 .\templates\pages\home.html:163
+#: .\templates\pages\home.html:174 .\templates\pages\home.html:185
+#: .\templates\pages\home.html:196 .\templates\pages\home.html:207
 msgid ""
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
 "tempor incididunt ut labore et dolore magna aliqua."
@@ -215,33 +231,35 @@ msgstr ""
 "لوريم إيبسوم دولور سيت أميت، كونسيكتيتور أديبيسينج إليت، سيد دو إيوسمود "
 "تيمبور إنكيديدونت أت لابور إت دولوري ماجنا أليكوا."
 
-#: .\templates\pages\home.html:140 .\templates\pages\home.html:151
-#: .\templates\pages\home.html:162 .\templates\pages\home.html:173
-#: .\templates\pages\home.html:184 .\templates\pages\home.html:195
+#: .\templates\pages\home.html:154 .\templates\pages\home.html:165
+#: .\templates\pages\home.html:176 .\templates\pages\home.html:187
+#: .\templates\pages\home.html:198 .\templates\pages\home.html:209
 msgid "View all companies"
 msgstr "عرض كل الشركات"
 
-#: .\templates\pages\home.html:180
-msgid "İnterior"
-msgstr "ديكور"
+#: .\templates\pages\home.html:205
+msgid "Others"
+msgstr "آحرون"
 
-#: .\templates\pages\home.html:191
-msgid "Fashion"
-msgstr "الأزياء"
-
-#: .\templates\pages\home.html:203
+#: .\templates\pages\home.html:217
 msgid "View all industries and companies"
 msgstr "عرض كل الصناعات والشركات"
 
-#: .\templates\pages\home.html:212
+#: .\templates\pages\home.html:226
 #, fuzzy
 #| msgid "Contact Us"
 msgid "Contact us"
 msgstr "اتصل بنا"
 
-#: .\templates\pages\home.html:220
+#: .\templates\pages\home.html:234
 msgid "Fountain Square, Baku, Azerbaijan"
 msgstr "ساحة النافورة، باكو، أذربيجان"
+
+#~ msgid "Health"
+#~ msgstr "الصحة"
+
+#~ msgid "Cleaning"
+#~ msgstr "تنظيف"
 
 #, fuzzy
 #~| msgid "Industry"

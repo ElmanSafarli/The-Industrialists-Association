@@ -1,10 +1,11 @@
 from django.contrib import admin
 from .models import Company, IndustryCategory, SubCategory
 from modeltranslation.admin import TranslationAdmin
+from import_export.admin import ImportExportModelAdmin
 
 
 @admin.register(Company)
-class CompanyAdmin(TranslationAdmin):
+class userdat(ImportExportModelAdmin):
     list_display = ('name', 'creation_date', 'industry', 'country')
     search_fields = ('name', 'industry', 'country')
     list_filter = ('industry', 'country')

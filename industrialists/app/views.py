@@ -28,6 +28,8 @@ class AllCompaniesView(TemplateView):
         industry_filter = self.request.GET.get('industry')
         search_query = self.request.GET.get('q')
 
+        print(country_filter,industry_filter,search_query)
+
         # Apply filters
         if country_filter:
             companies = companies.filter(country=country_filter)

@@ -59,8 +59,7 @@
             <div class="more-content">
                 <div class="more-info">
                     <div class="more-category">{{ company.industry }} industry</div>
-                    <div class="more-title">{{ company.name }}</div>
-                    <div class="more-img"><img src="{{ company.image.url }}" alt="{{ company.name }}"></div>
+                    <div class="more-title"><img src="{{ company.image.url }}" alt="{{ company.name }}">{{ company.name }}</div>
                     <div class="more-description">{{ company.description }}</div>
                     <div class="more-contact">
                         <div class="more-contact-item-group">
@@ -119,13 +118,9 @@
                           {% for recent_company in recent_companies %}
 
                                 <div class="more-popular-box">
-                                    <div class="more-popular-box-img">
-                                       <img src="{{ recent_company.image.url }}" alt="{{ recent_company.name }}">
-                                    </div>
                                     <div class="more-popular-box-info">
                                         <a href="{% url 'company_detail' company_name=recent_company.name %}">{{ recent_company.name }}</a>
                                         <div class="more-popular-box-category">
-                                            <img src="" alt="">
                                             <p>{{ recent_company.industry }}</p>
                                         </div>
                                     </div>

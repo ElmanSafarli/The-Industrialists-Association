@@ -21,7 +21,7 @@ class Company(models.Model):
     subcategory = models.ForeignKey(SubCategory, on_delete=models.SET_NULL, null=True, blank=True, verbose_name=_('Subcategory'))
     name = models.CharField(max_length=255, verbose_name=_('Name'))
     creation_date = models.DateField(verbose_name=_('Creation Date'))
-    image = models.ImageField(upload_to='company_images/', verbose_name=_('Image'))
+    image = models.ImageField(upload_to='company_images/', verbose_name=_('Image'), blank=True)
     description = models.TextField(verbose_name=_('Description'))
     location = models.TextField(verbose_name=_('Location'))
     phone = models.CharField(max_length=20, verbose_name=_('Phone'))

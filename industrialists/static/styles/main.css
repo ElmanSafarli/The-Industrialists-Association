@@ -1156,6 +1156,7 @@ body {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    margin-bottom: 12px;
 }
 
 .more-title {
@@ -1164,12 +1165,15 @@ body {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    display: flex;
+    align-items: start;
+    justify-content: start;
 }
 
-.more-img img {
-    height: 460px;
-    border-radius: 49px;
-    margin-top: 34px;
+.more-title img {
+    height: 114px;
+    margin-right: 14px;
+    border-radius: 8px;
 }
 
 .more-description {
@@ -1178,7 +1182,7 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-top: 76px;
+    margin-top: 40px;
     margin-bottom: 60px;
 }
 
@@ -1314,7 +1318,6 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-left: 10px;
 }
 
 .more-popular-box-img {
